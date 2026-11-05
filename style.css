@@ -327,4 +327,30 @@ footer {
     .panel {
         padding: 16px;
     }
+}/* Dark Mode */
+body.dark-mode {
+    background: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode .container {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+body.dark-mode input,
+body.dark-mode select,
+body.dark-mode textarea {
+    background: #2c2c2c;
+    color: #ffffff;
+    border: 1px solid #555;
+}
+
+body.dark-mode button {
+    opacity: 0.9;
+}
+
+body.dark-mode .task-item {
+    background: #292929;
+    color: #ffffff;
 }
