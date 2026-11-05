@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Task Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <header class="header">
+            <div>
+                <h1>TaskFlow</h1>
+                <p>Organize your work. Achieve your goals.</p>
+            </div>
+            <span class="header-icon">✓</span>
+        </header>
+
+        <section class="stats">
+            <div class="stat-card">
+                <span>Total Tasks</span>
+                <h2 id="totalTasks">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>Completed</span>
+                <h2 id="completedTasks">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <span>Pending</span>
+                <h2 id="pendingTasks">0</h2>
+            </div>
+        </section>
+
+        <section class="panel">
+            <h2>Add New Task</h2>
+
+            <form id="taskForm">
+                <input
+                    type="text"
+                    id="taskInput"
+                    placeholder="What needs to be done?"
+                    required
+                >
+
+                <select id="priorityInput">
+                    <option value="Low">Low Priority</option>
+                    <option value="Medium" selected>Medium Priority</option>
+                    <option value="High">High Priority</option>
+                </select>
+
+                <input type="date" id="dueDateInput">
+
+                <button type="submit" class="primary-button">
+                    + Add Task
+                </button>
+            </form>
+        </section>
+
+        <section class="panel task-panel">
+
+            <div class="task-heading">
+                <h2>My Tasks</h2>
+                <button id="clearCompleted" class="clear-button">
+                    Clear Completed
+                </button>
+            </div>
+
+            <div class="toolbar">
+                <input
+                    type="search"
+                    id="searchInput"
+                    placeholder="Search tasks..."
+                >
+
+                <select id="sortSelect">
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                    <option value="priority">Priority</option>
+                    <option value="dueDate">Due Date</option>
+                </select>
+            </div>
+
+            <div class="filters">
+                <button class="filter-button active" data-filter="all">All</button>
+                <button class="filter-button" data-filter="pending">Pending</button>
+                <button class="filter-button" data-filter="completed">Completed</button>
+            </div>
+
+            <ul id="taskList"></ul>
+
+            <p id="emptyMessage" class="empty-message">
+                No tasks found.
+            </p>
+
+        </section>
+
+        <footer>
+            <p>TaskFlow © 2026 | Stay Productive!</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
